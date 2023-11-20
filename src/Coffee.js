@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Coffee_data from './Data/Menu_coffee';
 import { Link } from 'react-router-dom';
 
 const CoffeeDisplay = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
  
     return(
         <>

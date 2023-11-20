@@ -1,9 +1,13 @@
 import { useParams } from "react-router-dom";
 import ShopIems from "./Data/Shop_data";
 import { Col, Container, Row } from "react-bootstrap";
+import { useEffect } from "react";
 
 
 const Product = ({}) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     let {sid} = useParams()
     let data = ShopIems.find((a) => a.id==sid)

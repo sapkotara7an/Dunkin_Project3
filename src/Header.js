@@ -4,7 +4,7 @@ import { Container, Dropdown, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Header() {
-  
+
 
   return (
     <div className="sticky" id="header">
@@ -22,24 +22,24 @@ function Header() {
         <Nav.Item>
           <Nav.Link>
             <Link to='signup'>
-            <div className="py-1">
-              <button className="header_button" type="submit">
-                Sign Up
-              </button>
-            </div>
-          </Link>
-            
+              <div className="py-1">
+                <button className="header_button" type="submit">
+                  Sign Up
+                </button>
+              </div>
+            </Link>
+
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link><Link to='login'>
-          <div className="py-1">
+            <div className="py-1">
               <button className="header_btn" >
                 Sign In
               </button>
             </div>
           </Link>
-            
+
           </Nav.Link>
         </Nav.Item>
       </Nav>
@@ -49,15 +49,27 @@ function Header() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto item">
               <Nav.Link>
+                <Link to="/">
+                  <p>HOME</p>
+                </Link>
+              </Nav.Link>
+
+              <Nav.Link>
+                <Link to='shop'>
+                  <p className="">SHOP</p>
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+              </Nav.Link>
+
+              <Nav.Link>
                 <Link to="/menu">
                   <p>MENU</p>
                 </Link>
               </Nav.Link>
-              <Nav.Link>
-                <Link to="/locations">
-                  <p>LOCATIONS</p>
-                </Link>
-              </Nav.Link>
+
+              
+
               <Nav.Link>
                 <Link to="/delivery">
                   <p>DELIVERY</p>
@@ -80,15 +92,13 @@ function Header() {
                 </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to ='card'>
-                <p>DUNKIN'<br /> CARD</p>
+                <Link to='card'>
+                  <p>DUNKIN'<br /> CARD</p>
                 </Link>
               </Nav.Link>
-              <Nav.Link>
-                <Link to='shop'>
-                <p className="">SHOP</p>
-                </Link>
-              </Nav.Link>
+              <Link to="/locations">
+                <p>LOCATIONS</p>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
